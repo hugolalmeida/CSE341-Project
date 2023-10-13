@@ -7,6 +7,16 @@
   },
   "host": "localhost:8080",
   "basePath": "/",
+  "tags": [
+    {
+      "name": "character",
+      "description": "Operations about character"
+    },
+    {
+      "name": "Not Yet Implemented",
+      "description": "These API endpoints are designed and will be created in the near future"
+    }
+  ],
   "schemes": [
     "http"
   ],
@@ -23,6 +33,7 @@
     },
     "/characters/": {
       "get": {
+        "tags": ["character"],
         "description": "",
         "produces": [
           "application/json"
@@ -34,6 +45,7 @@
         }
       },
       "post": {
+        "tags": ["character"],
         "description": "",
         "parameters": [
           {
@@ -76,6 +88,7 @@
     },
     "/characters/{id}": {
       "get": {
+        "tags": ["character"],
         "description": "",
         "produces": [
           "application/json"
@@ -95,6 +108,7 @@
         }
       },
       "put": {
+        "tags":["Not Yet Implemented"],
         "description": "",
         "parameters": [
           {
@@ -141,6 +155,7 @@
         }
       },
       "delete": {
+        "tags":["Not Yet Implemented"],
         "description": "",
         "parameters": [
           {

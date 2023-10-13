@@ -1,0 +1,31 @@
+###
+GET http://localhost:8080/api-docs HTTP/1.1
+
+###
+GET https://cse341-project-l3hu.onrender.com/api-docs HTTP/1.1
+
+###
+POST http://localhost:8080/characters HTTP/1.1
+content-type: application/json
+
+{
+"firstName":"Luffy", 
+"lastName":"Monkey D.", 
+"fruit":"aWeaver@test.com", 
+"birthday":"Red", 
+"nickname":"IDK",
+"crew":"Mugiwara"
+}
+
+###
+POST https://cse341-project-l3hu.onrender.com/characters HTTP/1.1
+content-type: application/json
+
+{
+"firstName":"Luffy", 
+"lastName":"Monkey D.", 
+"fruit":"aWeaver@test.com", 
+"birthday":"Red", 
+"nickname":"IDK",
+"crew":"Mugiwara"
+}

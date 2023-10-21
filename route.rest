@@ -5,16 +5,22 @@ GET http://localhost:8080/api-docs HTTP/1.1
 GET https://cse341-project-l3hu.onrender.com/api-docs HTTP/1.1
 
 ###
+GET http://localhost:8080/characters HTTP/1.1
+
+###
+GET https://cse341-project-l3hu.onrender.com/characters HTTP/1.1
+
+###
 POST http://localhost:8080/characters HTTP/1.1
 content-type: application/json
 
 {
-"firstName":"Luffy", 
-"lastName":"Monkey D.", 
-"fruit":"aWeaver@test.com", 
-"birthday":"Red", 
-"nickname":"IDK",
-"crew":"Mugiwara"
+"firstName":"Test", 
+"lastName":"testing", 
+"fruit":"none", 
+"birthday":"Idk", 
+"nickName":"Validation Test",
+"crew":"testable"
 }
 
 ###
@@ -26,6 +32,39 @@ content-type: application/json
 "lastName":"Monkey D.", 
 "fruit":"aWeaver@test.com", 
 "birthday":"Red", 
-"nickname":"IDK",
+"nickName":"IDK",
 "crew":"Mugiwara"
 }
+
+###
+PUT http://localhost:8080/characters/6533cf6d580e31c89e902b HTTP/1.1
+content-type: application/json
+
+{
+"firstName":"Shanks", 
+"lastName":"Akagami", 
+"fruit":"none", 
+"birthday":"IDK", 
+"nickName":"Akagame",
+"crew":"Akagame"
+}
+
+###
+PUT http://cse341-project-l3hu.onrender.com/characters/6533cf6d580e31c89e902b HTTP/1.1
+content-type: application/json
+
+{
+"firstName":"Shanks", 
+"lastName":"Akagami", 
+"fruit":"none", 
+"birthday":"IDK", 
+"nickName":"Akagame",
+"crew":"Akagame"
+}
+
+
+###
+DELETE http://localhost:8080/characters/6533ce259ca9bda6dd1633e2 HTTP/1.1
+
+###
+DELETE http://cse341-project-l3hu.onrender.com/characters/6533ce259ca9bda6dd1633e2 HTTP/1.1

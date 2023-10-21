@@ -1,25 +1,13 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "CSE341-Project API",
-    "description": "Lesson 5-8 project - One Piece API",
+    "title": "My API",
+    "description": "Lesson 4 API",
     "version": "1.0.0"
   },
   "host": "localhost:8080",
   "basePath": "/",
-  "tags": [
-    {
-      "name": "character",
-      "description": "Operations about character"
-    },
-    {
-      "name": "Not Yet Implemented",
-      "description": "These API endpoints are designed and will be created in the near future"
-    }
-  ],
-  "schemes": [
-    "http"
-  ],
+  "schemes": ["http"],
   "paths": {
     "/api-docs": {
       "get": {
@@ -33,19 +21,18 @@
     },
     "/characters/": {
       "get": {
-        "tags": ["character"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
       "post": {
-        "tags": ["character"],
         "description": "",
         "parameters": [
           {
@@ -69,8 +56,8 @@
                 "nickName": {
                   "example": "any"
                 },
-                "crew":{
-                  "example":"any"
+                "crew": {
+                  "example": "any"
                 }
               }
             }
@@ -88,11 +75,8 @@
     },
     "/characters/{id}": {
       "get": {
-        "tags": ["character"],
         "description": "",
-        "produces": [
-          "application/json"
-        ],
+        "produces": ["application/json"],
         "parameters": [
           {
             "name": "id",
@@ -104,11 +88,16 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },
       "put": {
-        "tags":["Not Yet Implemented"],
         "description": "",
         "parameters": [
           {
@@ -138,8 +127,8 @@
                 "nickName": {
                   "example": "any"
                 },
-                "crew":{
-                  "example":"any"
+                "crew": {
+                  "example": "any"
                 }
               }
             }
@@ -149,13 +138,15 @@
           "204": {
             "description": "No Content"
           },
+          "400": {
+            "description": "Bad Request"
+          },
           "500": {
             "description": "Internal Server Error"
           }
         }
       },
       "delete": {
-        "tags":["Not Yet Implemented"],
         "description": "",
         "parameters": [
           {
@@ -168,6 +159,9 @@
         "responses": {
           "204": {
             "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
           },
           "500": {
             "description": "Internal Server Error"

@@ -5,7 +5,7 @@
     "description": "Lesson 5-8 project - One Piece API",
     "version": "1.0.0"
   },
-  "host": "localhost:8080",
+  "host": "cse341-project-l3hu.onrender.com",
   "basePath": "/",
   "tags": [
     {

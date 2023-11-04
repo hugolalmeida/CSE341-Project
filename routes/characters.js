@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-
+const { auth, requiresAuth } = require('express-openid-connect');
 const contactsController = require('../controllers/characters');
 const validation = require('../middleware/validate');
 
-router.get('/', contactsController.getAll);
+router.get('/', requiresAuth(), contactsController.getAll);
 
 router.get('/:id', contactsController.getSingle);
 
